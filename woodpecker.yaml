@@ -10,11 +10,6 @@ steps:
   - name: build
     image: plugins/kaniko
     settings:
-      repo: giosg/k8s-hello-world
+      repo: nginx:1.25.1
       tags:
         - latest
-        - ${DRONE_COMMIT}
-      username:
-        from_secret: docker-username
-      password:
-        from_secret: docker-password
